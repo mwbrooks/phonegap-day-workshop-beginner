@@ -1,5 +1,10 @@
-phonegap-workshop
-=================
+# PhoneGap Day Workshop: Beginner
+
+## Tutorial
+
+Follow the complete tutorial on the [wiki page](https://github.com/mwbrooks/phonegap-day-workshop-beginner/wiki).
+
+## App
 
 A sample conference application to manage sessions and speakers built with PhoneGap.
 
@@ -15,4 +20,3 @@ A sample conference application to manage sessions and speakers built with Phone
 6. nl.x-services.plugins.calendar 4.2.6 "Calendar"
 7. nl.x-services.plugins.socialsharing 4.3.8 "SocialSharing"
 
-    
