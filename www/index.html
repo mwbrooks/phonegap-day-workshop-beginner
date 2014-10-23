@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/pageslider-fix.css" rel="stylesheet">
+</head>
+<body>
+
+<script id="home-tpl" type="text/template">
+    <header class="bar bar-nav">
+        <h1 class="title">PhoneGap Day 2014</h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+        <input class='search-key' type="search"/>
+    </div>
+
+    <div class="content"></div>
+</script>
+
+<script id="session-list-tpl" type="text/template">
+        <ul class="table-view">
+            {{#each this}}
+            <li class="table-view-cell media">
+                <a href="#sessions/{{ id }}">
+                    <img class="media-object pull-left" src="assets/pics/{{pic}}">
+                    <div class="media-body">
+                        {{firstName}} {{lastName}}
+                        <p>{{title}}</p>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+</script>
+
+<script id="session-tpl" type="text/template">
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" href="#">
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 class="title">Session Detail</h1>
+    </header>
+
+    <!-- NOTE: Bars MUST come before content -->
+    <nav class="bar bar-tab tabbar">
+        <div class="favoriteBtn tab-item">
+            <span class="icon icon-star-filled"></span>
+            <span class="tab-label">Favorite</span>
+        </div>
+        <div class="addBtn tab-item">
+            <span class="icon icon-plus"></span>
+            <span class="tab-label">Add</span>
+        </div>
+        <div class="shareBtn tab-item">
+            <span class="icon icon-share"></span>
+            <span class="tab-label">Share</span>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="card">
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <img class="media-object pull-left" src="assets/pics/{{pic}}">
+                    <div class="media-body">
+                        {{firstName}} {{lastName}}
+                        <p>{{title}}</p>
+                    </div>
+                    <p>{{room}} | {{time}}</p>
+                </li>
+                <li class="table-view-cell">
+                    <p class="desc">{{description}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</script>
+
+<script src="cordova.js"></script>
+<script src="lib/fastclick.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="lib/jquery.js"></script>
+<script src="lib/pageslider.js"></script>
+<script src="lib/router.js"></script>
+<script src="js/services/websql/ConferenceService.js"></script>
+<script src="js/SessionListView.js"></script>
+<script src="js/HomeView.js"></script>
+<script src="js/SessionView.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
